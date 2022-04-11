@@ -1,0 +1,7 @@
+{
+  "name": "GrangeMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
