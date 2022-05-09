@@ -3,8 +3,26 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  
+  production: true,
+  firebase: {
+    apiKey: "AIzaSyC9NjANms7F68GmmWQ4QDVTkjn6pFR1V5w",
+    authDomain: "collegedata-8c3af.firebaseapp.com",
+    projectId: "collegedata-8c3af",
+    storageBucket: "collegedata-8c3af.appspot.com",
+    messagingSenderId: "125937197146",
+    appId: "1:125937197146:web:59a2b70974110e42047863",
+    measurementId: "G-ZTCG9JV4JB"
+  }
+  
+
+  
 };
+
+
+
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

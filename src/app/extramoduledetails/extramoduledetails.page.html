@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="backbutton" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Extra Module</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Module No</ion-label>
+    <ion-input [(ngModel)]="extramodule.moduleNo" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Module Name</ion-label>
+    <ion-input [(ngModel)]="extramodule.moduleName" rows="2"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Module Credits</ion-label>
+    <ion-input [(ngModel)]="extramodule.moduleCredits" rows="2"></ion-input>
+  </ion-item>
+</ion-content>
+
+<!-- Only show Add Student button if no student ID
+ has been passed, otherwise its being used to update/delete -->
+<ion-footer *ngIf="!extramodule.moduleID">
+  <ion-toolbar >
+    <ion-button expand="block" (click)="addExtraModule()">
+      <ion-icon name="checkmark" slot="start"></ion-icon>
+      Add Module
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- Show these buttons if a moduleID has been passed with the router. If there 
+ is a moduleID it means that the page is being used to and show ( update/delete ) button  -->
+<ion-footer *ngIf="extramodule.moduleID">
+  <ion-row ion-padding text-center>
+    <ion-toolbar>
+
+      <ion-row>
+      <ion-col col-6>
+        <ion-button expand="block" fill="outline" color="success" size="small" (click)="updateExtraModule()"><ion-icon name="reload-outline" slot="start"></ion-icon>Update</ion-button>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-button expand="block" fill="outline" color="danger" size="small" (click)="deleteExtraModule()"><ion-icon name="trash" slot="start"></ion-icon>Delete</ion-button>
+      </ion-col>
+      </ion-row>
+
+      <ion-button expand="block" fill="outline" size="defaul" (click)="presentModal()"><ion-icon name="add-outline" slot="start"></ion-icon>Extra Module List</ion-button>
+      
+    </ion-toolbar>
+  </ion-row>
+</ion-footer>
+
+
+
+
+
+

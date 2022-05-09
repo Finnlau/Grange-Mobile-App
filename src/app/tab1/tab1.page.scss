@@ -1,0 +1,15 @@
+#map{
+    height: 60%;
+    width: 90%;
+    margin: 10px;
+    border-radius: 15px;
+    opacity: 10;
+    display: block;
+    margin-left: 14px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    &.show-map{
+        opacity: 1;
+    }
+
+    
+}

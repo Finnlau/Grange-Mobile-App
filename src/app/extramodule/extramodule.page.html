@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>extramodule</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar> 
+
+    <!-- Lists extramodules and create a routerLink to student/:extramoduleID, passing the current module object along 
+    to the module details page where it will be needed to read the details from the collection-->
+    <ion-list>
+      <ion-item button *ngFor="let extramodule of (extramodules | async)" [routerLink]="['/extramoduledetails', extramodule.moduleID]">
+        {{ extramodule.moduleName}} | {{ extramodule.moduleNo }}
+      </ion-item>
+    </ion-list>
+
+    <!-- Button direct to add extra module page -->
+    <ion-button expand="block "routerLink="/extramoduledetails">Add Extra Module</ion-button>
+
+  </ion-toolbar> 
+</ion-content>
+
+

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Student Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>   
+  <ion-content padding>
+  <ion-card *ngIf="lecturer">
+
+    <ion-card-header>
+      <ion-card-title> {{ lecturer.firstName }} {{ lecturer.lastName }} </ion-card-title>
+      <ion-card-subtitle> {{ lecturer.email }} </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label position="stacked">Staff Number:</ion-label> {{ lecturer.staffNumber }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Module No: </ion-label> {{ lecturer.moduleNo1 }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Module No: </ion-label> {{ lecturer.moduleNo2 }}
+      </ion-item>
+
+    </ion-card-content>
+ 
+  </ion-card>
+  </ion-content>
+</ion-content>
+
+

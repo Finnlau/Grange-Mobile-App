@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Module Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>   
+  <ion-content padding>
+  <ion-card *ngIf="module">
+    <ion-card-header>
+      <ion-card-title> {{module.moduleName}} </ion-card-title>
+      <ion-card-subtitle> {{ module.moduleNo }} </ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      
+      <ion-item>
+        <ion-label position="stacked">Location:</ion-label>{{ module.location }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Room: </ion-label> {{ module.room }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Credits: </ion-label> {{ module.credits }}
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Due Date: </ion-label> {{ module.dueDate }}
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Website: </ion-label> {{ module.website }}
+      </ion-item>
+
+    </ion-card-content>
+
+  </ion-card>
+  </ion-content>
+</ion-content>
+
+
+
